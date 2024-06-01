@@ -86,11 +86,9 @@ body {
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* 放大 20% */
-    transition: transform 0.2s ease; /* 動畫時間和動畫效果 */
-  }
-
-
+  transform: scale(1.2); /* 放大 20% */
+  transition: transform 0.2s ease; /* 動畫時間和動畫效果 */
+}
 
 /* 媒體查詢 - 手機尺寸 */
 @media (max-width: 768px) {
