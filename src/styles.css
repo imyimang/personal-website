@@ -110,16 +110,16 @@ body {
 /* 媒體查詢 - 平板尺寸 */
 @media (min-width: 769px) and (max-width: 1024px) {
   .box {
-    width: auto; /* 框的寬度 */
-    height: auto; /* 讓高度自適應內容 */
+    width: 800px; /* 框的寬度 */
+    height: 300px; /* 讓高度自適應內容 */
   }
 
   .social-icon {
-    width: 40px; /* 圖標的寬度 */
-    height: 40px; /* 圖標的高度 */
+    width: 100px; /* 圖標的寬度 */
+    height: 100px; /* 圖標的高度 */
   }
   .title {
     top: 20px; /* 調整 .title 的位置 */
-    font-size: 2.5em; /* 調整 .title 的字體大小 */
+    font-size: 5em; /* 調整 .title 的字體大小 */
   }
 }
