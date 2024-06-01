@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #c9d6ff; /* 淺藍色背景 */
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* 從右到左的淺灰色到淺藍色的漸層 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  color: white; /* 文字顏色設為白色，方便在淺色背景上顯示 */
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%); /* 同時處理水平和垂直方向 */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0); /* 同時處理水平和垂直方向 */
+  }
+}
+
+.title {
+  animation: fadeIn 2s ease-in-out;
+  font-size: 4em; /* 放大字體 */
+  color: black; /* 設置文字顏色為白色 */
+  position: fixed; /* 固定位置 */
+  top: 80px; /* 垂直置中 */
+  left: 50%; /* 水平置中 */
+  transform: translate(-50%); /* 將元素置中 */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  width: 800px; /* 調整寬度 */
+  height: 150px; /* 調整高度 */
+  max-width: 80%;
+  margin: 0 auto; /* 將左右外邊距設為 auto 以水平置中 */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icon {
+  width: 50px; /* 圖標的寬度 */
+  height: 50px; /* 圖標的高度 */
+  border-radius: 50%; /* 圖標的邊框半徑，使其呈現圓形 */
+  /* 圖標的背景顏色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px; /* 圖標之間的邊距 */
+}
+
+.social-icon img {
+  width: 100%; /* 讓圖片填滿父元素的大小 */
+  height: 100%; /* 讓圖片填滿父元素的大小 */
+  border-radius: 50%; /* 圖片也需要設置邊框半徑 */
+
+  object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* 放大 20% */
+    transition: transform 0.2s ease; /* 動畫時間和動畫效果 */
+  }
+
+
+
+/* 媒體查詢 - 手機尺寸 */
+@media (max-width: 768px) {
+  .box {
+    width: 90%; /* 框的寬度 */
+    height: auto; /* 讓高度自適應內容 */
+  }
+
+  .social-icon {
+    width: 80px; /* 圖標的寬度 */
+    height: 80px; /* 圖標的高度 */
+  }
+  .title {
+    top: 20px; /* 調整 .title 的位置 */
+    font-size: 3em; /* 調整 .title 的字體大小 */
+  }
+}
+
+/* 媒體查詢 - 平板尺寸 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .box {
+    width: auto; /* 框的寬度 */
+    height: auto; /* 讓高度自適應內容 */
+  }
+
+  .social-icon {
+    width: 40px; /* 圖標的寬度 */
+    height: 40px; /* 圖標的高度 */
+  }
+  .title {
+    top: 20px; /* 調整 .title 的位置 */
+    font-size: 3em; /* 調整 .title 的字體大小 */
+  }
+}
