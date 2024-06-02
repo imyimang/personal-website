@@ -52,6 +52,14 @@ body {
   }
 }
 
+.experience-box {
+  transition: transform 0.3s;
+}
+
+.experience-box:hover {
+  transform: scale(1.1);
+}
+
 
 
 

@@ -5,7 +5,8 @@ import githubIcon from './icon/github.svg';
 
 const SocialBox = () => {
   return (
-    <div className="bg-white rounded-lg shadow-2xl p-5 w-full max-w-5/6 h-40 mx-auto flex justify-around items-center px-10">
+    
+    <div className="bg-white rounded-lg shadow-2xl p-5 w-full max-w-5/6 h-40 mx-auto flex justify-around items-center px-10 experience-box">
       <a
         href="https://www.facebook.com/profile.php?id=100056011625720"
         target="_blank"
