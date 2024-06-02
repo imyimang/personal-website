@@ -1,4 +1,4 @@
-用react.js + vite製作的個人網站
+用react.js + vite + tailwind製作的個人網站
 
 https://website-chi-seven-95.vercel.app/
 
