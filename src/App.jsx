@@ -1,7 +1,7 @@
 import "./styles.css";
-import facebookIcon from "./icon/fb.svg";
-import instagramIcon from "./icon/ig.svg";
-import githubIcon from "./icon/github.svg";
+import ExperienceBox from "./ExperienceBox";
+import SocialBox from "./SocialBox";
+import Title from "./Title";
 
 /*
 function Test(){
@@ -22,40 +22,13 @@ function App() {
         name="viewport"
         content="width=device-width, initial-scale=1"
       ></meta>
-
-      <div className="title">This is yimang's website</div>
-      <div className="container">
-
-        <div className="box">
-          <a
-            href="https://www.facebook.com/profile.php?id=100056011625720"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <img src={facebookIcon} alt="Facebook Icon" />
-          </a>
-
-          <a
-            href="https://www.instagram.com/yimang__/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <img src={instagramIcon} alt="Instagram Icon" />
-          </a>
-
-          <a
-            href="https://github.com/imyimang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon"
-          >
-            <img src={githubIcon} alt="Github Icon" />
-          </a>
-
-        </div>
-      </div>
+    <Title/>
+  <div className="mt-8"> {/* 調整不重疊的間距 */}
+    <ExperienceBox />
+  </div>
+  <div className="mt-8"> {/* 調整不重疊的間距 */}
+    <SocialBox />
+  </div>
     </>
   );
 }
