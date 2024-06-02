@@ -22,13 +22,17 @@ function App() {
         name="viewport"
         content="width=device-width, initial-scale=1"
       ></meta>
-    <Title/>
-  <div className="mt-24"> {/* 調整不重疊的間距 */}
-    <ExperienceBox />
-  </div>
-  <div className="mt-8"> {/* 調整不重疊的間距 */}
-    <SocialBox />
-  </div>
+      <Title />
+      <div className="mt-24">
+        {" "}
+        {/* 調整不重疊的間距 */}
+        <ExperienceBox />
+      </div>
+      <div className="mt-8">
+        {" "}
+        {/* 調整不重疊的間距 */}
+        <SocialBox />
+      </div>
     </>
   );
 }
