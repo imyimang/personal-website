@@ -51,4 +51,11 @@ body {
   }
 }
 
+.text-container {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 顯示的最大行數 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: clamp(14px, 2.5vw, 18px); /* 調整文字大小的範圍 */
+}
 
