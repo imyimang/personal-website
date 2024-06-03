@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import instagramIcon from './icon/ig.svg';
 import discordIcon from './icon/dc.svg';
+import HomeIcon from './Homeicon';
 
 const Title = () => {
   return (
@@ -93,6 +94,7 @@ const Textbox = () => {
 const Coffeehost = () =>{
     return(
         <>
+        <HomeIcon/>
         <Title/>
         <Subtitle/>
         <div className="mt-20">
