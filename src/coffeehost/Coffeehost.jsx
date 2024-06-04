@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import instagramIcon from "./icon/ig.svg";
-import discordIcon from "./icon/dc.svg";
-import HomeIcon from "./Homeicon";
+import instagramIcon from "../icon/ig.svg";
+import discordIcon from "../icon/dc.svg";
+import HomeIcon from "../home/Homeicon";
 
 const Title = () => {
   return (

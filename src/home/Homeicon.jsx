@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from "./icon/icon.png"
+import Icon from "../icon/icon.png"
 
 const HomeIcon = () => {
   const handleClick = () => {
