@@ -3,7 +3,7 @@ import React from 'react';
 import ExperienceBox from "./ExperienceBox";
 import SocialBox from "./SocialBox";
 import Title from "./Title";
-import HomeIcon from './Homeicon';
+import HomeIcon from '../Homeicon';
 
 const Homepage = () => {
   return (
