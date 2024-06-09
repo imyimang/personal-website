@@ -2,7 +2,7 @@ import React from "react";
 
 const Textbox = () => {
     return (
-      <div className="bg-white rounded-lg shadow-2xl p-8 w-full xl:max-w-10xl h-40 mx-auto flex flex-col justify-center items-center experience-box transition-transform duration-300 hover:scale-110">
+      <div className="bg-white rounded-lg shadow-2xl p-8 w-full xl:max-w-10xl h-50 mx-auto flex flex-col justify-center items-center experience-box transition-transform duration-300 hover:scale-110">
         <h2 className="text-black text-2xl font-bold text-center font-sans">
           服務內容
         </h2>
