@@ -15,7 +15,7 @@ const Coffeehost = () => {
         {/* 調整不重疊的間距 */}
         <Textbox/>
       </div>
-      <div className="mt-16">
+      <div className="mt-10">
         {/* 調整不重疊的間距 */}
         <SocialBox/>
       </div>
