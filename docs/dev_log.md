@@ -7,3 +7,6 @@
 - 2024/06/06
     - 刪除src裡的postcss.config.js似乎不影響運行，之前誤刪了根目錄的tailwind.config.js結果導致跑版。
     - 先大概做了一個部落格的架構，不過還在測試階段無法使用。
+
+- 2024/06/11
+    - 解決了CoffeeHost頁面textbox的文字裁切問題，改成用傳統css就好了。
