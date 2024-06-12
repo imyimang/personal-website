@@ -18,7 +18,7 @@
   
   .textbox:hover {
     transform: scale(1.1);
-    height: 20rem; /* 懸停時的高度 */
+    height: 25rem; /* 懸停時的高度 */
   }
 
   .title2 {
