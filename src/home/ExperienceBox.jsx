@@ -13,7 +13,10 @@ const ExperienceBox = () => {
         團隊成員
       </p>
       <p className="text-gray-700 text-center font-sans">
-        大安高工第26屆電腦研究社 副社&軟教
+        <a href="https://www.instagram.com/dacsc26th/" target="_blank" className="text-blue-500 hover:underline">
+          大安高工第26屆電腦研究社
+        </a>{" "}
+        副社/軟教
       </p>
     </div>
   );
