@@ -9,7 +9,7 @@ const WriteBlog = () => {
 
   const handleSave = async () => {
     try {
-      await axios.post('http://localhost:5000/api/blogs', { title, content });
+      await axios.post('website-chi-seven-95.vercel.app/api/blogs', { title, content });
       alert('Blog saved successfully!');
     } catch (error) {
       alert('Failed to save blog');
