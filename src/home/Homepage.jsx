@@ -11,7 +11,6 @@ const Homepage = () => {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <HomeIcon/>
-      <Mouse/>
       <Title />
       <div className="mt-24">
         {/* 調整不重疊的間距 */}

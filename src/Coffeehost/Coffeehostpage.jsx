@@ -10,7 +10,6 @@ const Coffeehost = () => {
   return (
     <>
       <HomeIcon/>
-      <Mouse/>
       <Title/>
       <Subtitle/>
       <div className="mt-20">
