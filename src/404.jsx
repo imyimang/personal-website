@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
 
       <div className="text-center">
-        <Title title = "404" top = "40"/>
+        <Title title = "404"/>
         <Mouse/>
         <p className="text-2xl text-gray-600 mb-8">頁面未找到</p>
         <Link to="/" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">
