@@ -10,7 +10,7 @@ const ExperienceBox = () => {
         <a href="/coffeehost" className="text-blue-500 hover:underline">
           CoffeeHost超大咖託管
         </a>{" "}
-        團隊成員
+        創辦人
       </p>
       <p className="text-gray-700 text-center font-sans">
         <a href="https://www.instagram.com/dacsc26th/" target="_blank" className="text-blue-500 hover:underline">
