@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Testbox = () => {
+const Textbox = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -10,7 +10,7 @@ const Testbox = () => {
   const introduction = (
     <>CoffeeHost 是一個專注於提供高品質 Minecraft 伺服器託管服務的平台。
     我們致力於為客戶提供穩定、安全、高效的 Minecraft 伺服器託管解決方案。
-    我們的團隊由一群志同道合的學生組成，隨時準備為您解決各種技術問題
+    我們的團隊由一群志同道合的學生組成，隨時準備為您解決各種技術問題。
     <br/><br/>
     從 2024年2月 起，我們分別在馬來西亞和台灣架設了三台伺服器主機，提供了超過 150 台的 Minecraft 伺服器託管，服務超過 200 位客戶，
     致力於用較低的價格提供高品質的服務。
@@ -20,22 +20,22 @@ const Testbox = () => {
   const experiences = {
     主機配置: {
       "TW-S節點": [
-        { title: "AMD R9-7950X 5.7GHz", role: "CPU" },
-        { title: "Micron 192GB DDR5 5600MHz", role: "記憶體" },
-        { title: "Micron 2TB NVMe", role: "硬碟" },
-        { title: "台灣速連", role: "抗攻擊" },
+        { title: "CPU", role: "AMD R9-7950X 5.7GHz" },
+        { title: "記憶體", role: "Micron 192GB DDR5 5600MHz" },
+        { title: "硬碟", role: "Micron 2TB NVMe" },
+        { title: "抗攻擊", role: "台灣速連" },
       ],
       "TW-P節點": [
-        { title: "Intel® Core™ i9-13900 5.6GHz", role: "CPU" },
-        { title: "Micron 128GB DDR4 3200MHz", role: "記憶體" },
-        { title: "Micron 2TB NVMe", role: "硬碟" },
-        { title: "台灣速連", role: "抗攻擊" },
+        { title: "CPU", role: "Intel® Core™ i9-13900 5.6GHz" },
+        { title: "記憶體", role: "Micron 128GB DDR4 3200MHz" },
+        { title: "硬碟", role: "Micron 2TB NVMe" },
+        { title: "抗攻擊", role: "台灣速連" },
       ],
       "MY-1節點": [
-        { title: "Intel Xeon E5-2686 v4*2 2.30GHz", role: "CPU" },
-        { title: "128GB DDR3 2333MHz", role: "記憶體" },
-        { title: "3TB HDD", role: "硬碟" },
-        { title: "OVH", role: "抗攻擊" },
+        { title: "CPU", role: "Intel Xeon E5-2686 v4*2 2.30GHz" },
+        { title: "記憶體", role: "128GB DDR3 2333MHz" },
+        { title: "硬碟", role: "3TB HDD" },
+        { title: "抗攻擊", role: "OVH" },
       ],
     },
   };
@@ -74,7 +74,7 @@ const Testbox = () => {
                     <div className="space-y-2">
                       {items.map((item, index) => (
                         <p key={index} className="text-gray-700 font-sans">
-                          {item.title} - <span className="font-bold">{item.role}</span>
+                          <span className="font-bold">{item.title}</span> - {item.role}
                         </p>
                       ))}
                     </div>
@@ -85,7 +85,7 @@ const Testbox = () => {
           </div>
         ) : (
           <p className="text-gray-700 text-center font-sans">
-            點擊查看詳細介紹
+            點擊查看
           </p>
         )}
       </div>
@@ -93,4 +93,4 @@ const Testbox = () => {
   );
 };
 
-export default Testbox;
+export default Textbox;

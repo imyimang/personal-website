@@ -7,6 +7,12 @@ const ExperienceBox = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const introduction = (
+    <>
+      一個喜歡寫程式和參與社群的高中生
+    </>
+  );
+
   const experiences = {
     活動經歷: [
       {
@@ -57,6 +63,7 @@ const ExperienceBox = () => {
         </h2>
         {isExpanded ? (
           <div className="space-y-8">
+            <p className="text-gray-700 font-sans mb-6">{introduction}</p>
             {Object.entries(experiences).map(([category, items]) => (
               <div key={category} className="mb-6">
                 <h3 className="text-black text-xl font-bold mb-3">
@@ -73,7 +80,7 @@ const ExperienceBox = () => {
                       >
                         {item.title}
                       </a>{" "}
-                      {item.role}
+                      <span className="font-bold">{item.role}</span>
                     </p>
                   ))}
                 </div>
