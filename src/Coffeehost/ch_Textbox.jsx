@@ -10,7 +10,7 @@ const Textbox = () => {
       setTimeout(() => {
         setIsExpanded(false);
         setIsTransitioning(false);
-      }, 300); // 這個時間應該與 CSS 過渡時間匹配
+      }, 700); // 這個時間應該與 CSS 過渡時間匹配
     } else {
       setIsExpanded(true);
     }
