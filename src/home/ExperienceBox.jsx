@@ -2,9 +2,18 @@ import React, { useState } from "react";
 
 const ExperienceBox = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
+    if (isExpanded) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setIsExpanded(false);
+        setIsTransitioning(false);
+      }, 700); // This duration should match the CSS transition duration
+    } else {
+      setIsExpanded(true);
+    }
   };
 
   const introduction = (
@@ -47,10 +56,12 @@ const ExperienceBox = () => {
     <div
       className={`bg-white rounded-lg shadow-2xl p-8 mx-auto transition-all ease-in-out cursor-pointer
       ${
-        isExpanded
+        isExpanded || isTransitioning
           ? "fixed top-0 left-0 w-full h-full z-50 overflow-auto duration-700"
           : "w-full xl:max-w-5/6 h-40 hover:scale-110 duration-400"
-      }`}
+      }
+      ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}
+      `}
       onClick={toggleExpand}
     >
       <div

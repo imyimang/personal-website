@@ -2,9 +2,18 @@ import React, { useState } from "react";
 
 const Textbox = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
+    if (isExpanded) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setIsExpanded(false);
+        setIsTransitioning(false);
+      }, 300); // 這個時間應該與 CSS 過渡時間匹配
+    } else {
+      setIsExpanded(true);
+    }
   };
 
   const introduction = (
@@ -44,10 +53,12 @@ const Textbox = () => {
     <div
       className={`bg-white rounded-lg shadow-2xl p-8 mx-auto transition-all ease-in-out cursor-pointer
       ${
-        isExpanded
-          ? "fixed top-0 left-0 w-full h-full z-50 overflow-auto duration-700"
-          : "w-full xl:max-w-5/6 h-40 hover:scale-110 duration-400"
-      }`}
+        isExpanded || isTransitioning
+          ? "fixed top-0 left-0 w-full h-full z-50 overflow-auto duration-300"
+          : "w-full xl:max-w-5/6 h-40 hover:scale-110 duration-300"
+      }
+      ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}
+      `}
       onClick={toggleExpand}
     >
       <div
