@@ -2,9 +2,6 @@
 
 https://website-chi-seven-95.vercel.app/
 
-## license
-本專案採用MIT授權，可以自行下載更改
-
 > [!NOTE]  
 > 這個專案只是為了讓我能方便部屬在vercel上，內容會隨時更改
 
