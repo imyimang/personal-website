@@ -49,6 +49,11 @@ const ExperienceBox = () => {
         role: "副社/軟教",
         link: "https://www.instagram.com/dacsc26th/",
       },
+      {
+        title: "大安高工第1屆資訊安全研究社",
+        role: "網管",
+        link: "https://www.instagram.com/taivs.cssc/",
+      },
     ],
   };
 
