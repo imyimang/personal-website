@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import trailImage from './icon/beast.jpg'; // 導入您的圖片
+import trailImage from '/beast.jpg'; // 導入您的圖片
 
 const MouseTrail = () => {
   const [trails, setTrails] = useState([]);

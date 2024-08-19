@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import facebookIcon from '../icon/fb.svg';
-import instagramIcon from '../icon/ig.svg';
-import githubIcon from '../icon/github.svg';
+import facebookIcon from '/fb.svg';
+import instagramIcon from '/ig.svg';
+import githubIcon from '/github.svg';
 
 const SocialBox = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
