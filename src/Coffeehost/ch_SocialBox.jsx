@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import instagramIcon from "/ig.svg";
 import discordIcon from "/dc.svg";
 import storeIcon from "/store.webp";
+import webIcon from "/web.png";
 
 const SocialBox = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -35,23 +36,23 @@ const SocialBox = () => {
       </a>
 
       <a
-        href="https://store.coffeehost.net"
+        href="https://coffeehost.net/ "
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex flex-col justify-center items-center m-1.5 hover:scale-110 transition-transform duration-400 ease-in-out"
-        onMouseEnter={() => handleMouseEnter("Store")}
+        onMouseEnter={() => handleMouseEnter("Website")}
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={storeIcon}
-          alt="Shop Icon"
+          src={webIcon}
+          alt="Website Icon"
           className="w-full h-full rounded-full object-contain"
         />
-        {hoveredIcon === "Store" && (
-          <span className="mt-2 text-sm text-gray-800">Store</span>
+        {hoveredIcon === "Website" && (
+          <span className="mt-2 text-sm text-gray-800">Website</span>
         )}
       </a>
-      
+
       <a
         href="https://discord.gg/2vA8ms9X7y "
         target="_blank"
@@ -69,6 +70,7 @@ const SocialBox = () => {
           <span className="mt-2 text-sm text-gray-800">Discord</span>
         )}
       </a>
+
     </div>
   );
 };
