@@ -54,8 +54,8 @@ const Textbox = () => {
       className={`bg-white rounded-lg shadow-2xl p-8 mx-auto transition-all ease-in-out cursor-pointer
       ${
         isExpanded || isTransitioning
-          ? "fixed top-0 left-0 w-full h-full z-50 overflow-auto duration-300"
-          : "w-full xl:max-w-5/6 h-40 hover:scale-110 duration-300"
+          ? "fixed top-0 left-0 w-full h-full z-50 overflow-auto duration-700"
+          : "w-full xl:max-w-5/6 h-40 hover:scale-110 duration-700"
       }
       ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}
       `}
