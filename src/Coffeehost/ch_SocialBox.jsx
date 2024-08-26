@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import instagramIcon from "/ig.svg";
 import discordIcon from "/dc.svg";
-import storeIcon from "/store.webp";
 import webIcon from "/web.png";
 
 const SocialBox = () => {
