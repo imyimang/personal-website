@@ -41,7 +41,7 @@ const ExperienceBox = () => {
       },
     ],
     社群經歷: [
-      { title: "CoffeeHost超大咖託管", role: "創辦人", link: "/coffeehost" },
+      { title: "CoffeeHost超大咖託管", role: "合夥創辦人", link: "https://coffeehost.net" },
     ],
     其他經歷: [
       {
