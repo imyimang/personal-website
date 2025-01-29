@@ -4,8 +4,6 @@ import ExperienceBox from "./ExperienceBox";
 import SocialBox from "./SocialBox";
 import Title from "../Title";
 import HomeIcon from '../Homeicon';
-//import BackgroundSlideshow from '../BackgroundSlideshow';
-//import Mouse from '../Mouse';
 
 const Homepage = () => {
   return (
@@ -19,6 +17,9 @@ const Homepage = () => {
       <div className="mt-8">
         <SocialBox />
       </div>
+      <footer className="text-white text-center mt-8 mb-4">
+        Copyright © 2025 yimang. All rights reserved.
+      </footer>
     </>
   );
 };
