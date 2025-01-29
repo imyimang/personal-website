@@ -23,6 +23,13 @@ const ExperienceBox = () => {
   );
 
   const experiences = {
+    其他網站: [
+      {
+        title: "Blog",
+        role: "",
+        link: "https://blog.isgay.tech",
+      },
+    ],
     活動經歷: [
       {
         title: "g0v Summit 2024",
