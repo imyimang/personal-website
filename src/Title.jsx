@@ -1,4 +1,3 @@
-//Title.jsx
 import React, { useEffect, useState, useRef } from 'react';
 import './Title.css';
 
@@ -17,7 +16,6 @@ const Title = ({ title, onHeightChange }) => {
       }
     }, 100);
 
-    // 監聽高度變化
     const updateHeight = () => {
       if (titleRef.current) {
         const height = titleRef.current.offsetHeight;
@@ -25,7 +23,6 @@ const Title = ({ title, onHeightChange }) => {
       }
     };
 
-    // 初始更新和窗口調整時更新
     updateHeight();
     window.addEventListener('resize', updateHeight);
 
@@ -36,9 +33,10 @@ const Title = ({ title, onHeightChange }) => {
   }, [title, onHeightChange]);
 
   return (
-    <div 
+    <div
       ref={titleRef}
-      className="fixed left-1/2 transform -translate-x-1/2 text-3xl text-black md:text-5xl lg:text-6xl py-4 animate-fade-in top-20 z-50"
+      className="fixed left-1/2 top-20 transform -translate-x-1/2 z-50 flex justify-center items-center text-black
+                 text-[max(4vw,24px)] max-w-[90vw] whitespace-nowrap overflow-hidden"
       style={{ fontFamily: 'CustomFont, sans-serif' }}
     >
       {displayText}
