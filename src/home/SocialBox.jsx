@@ -36,7 +36,7 @@ const SocialBox = () => {
         )}
       </a>
 
-      {/* <a
+      <a
         href="https://t.me/imyimang"
         target="_blank"
         rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const SocialBox = () => {
         {hoveredIcon === 'Telegram' && (
           <span className="mt-2 text-sm text-gray-800">Telegram</span>
         )}
-      </a>  */}
+      </a> 
 
       <a
         href="https://x.com/imyimang"
