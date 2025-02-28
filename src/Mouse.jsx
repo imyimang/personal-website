@@ -34,7 +34,7 @@ const MouseTrail = () => {
     <>
       {trails.map((trail) => {
         const age = Date.now() - trail.timestamp; // 軌跡存在的時間（毫秒）
-        const progress = age / 1000; // 0 ~ 1 之間（在 1 秒內）
+        const progress = age / 500; // 0 ~ 1 之間（在 1 秒內）
         // 頭大尾小效果：剛出現時 scale 1.5，逐漸縮小到 0.5
         const scale = 1.5 - progress;
         // 透明度從 1 漸漸降到 0
