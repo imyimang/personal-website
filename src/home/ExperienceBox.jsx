@@ -55,10 +55,10 @@ const ExperienceBox = () => {
       { title: "大安高工第1屆資訊安全研究社", role: "網管", period: "(2024 – Present)", link: "https://www.instagram.com/taivs.cssc/" },
     ],
     活動經歷: [
-      { title: "g0v Summit 2024", role: "會眾", period: "", link: "https://summit.g0v.tw/2024/" },
-      { title: "CYBERSEC 2024 臺灣資安大會", role: "參與者", period: "", link: "https://cybersec.ithome.com.tw/" },
-      { title: "SITCON Hackathon 2024", role: "參賽者", period: "", link: "https://hackathon.sitcon.org/2024/" },
-      { title: "SITCON 2025", role: "會眾", period: "", link: "https://sitcon.org/2025/" },
+      { title: "g0v Summit 2024", role: "會眾", period: "", link: "/g0v-2024" },
+      { title: "CYBERSEC 2024 臺灣資安大會", role: "參與者", period: "", link: "/cybersec-2024" },
+      { title: "SITCON Hackathon 2024", role: "參賽者", period: "", link: "/sitcon-hackathon-2024" },
+      { title: "SITCON 2025", role: "會眾", period: "", link: "/sitcon-2025" },
     ],
   };
 
