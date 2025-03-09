@@ -19,7 +19,9 @@ const Title = ({ title, onHeightChange }) => {
     const updateHeight = () => {
       if (titleRef.current) {
         const height = titleRef.current.offsetHeight;
-        onHeightChange(height);
+        if (typeof onHeightChange === 'function') { // 檢查是否為函數
+          onHeightChange(height);
+        }
       }
     };
 
