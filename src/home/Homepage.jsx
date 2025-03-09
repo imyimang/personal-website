@@ -28,7 +28,7 @@ const Homepage = () => {
         <SocialBox />
       </div>
       <footer className="text-white text-center mt-8 mb-4">
-        Copyright © 2025 yimang. All rights reserved.
+        Copyright © 2024-2025 yimang. All rights reserved.
       </footer>
     </>
   );
