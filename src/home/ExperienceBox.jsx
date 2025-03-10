@@ -80,10 +80,10 @@ const ExperienceBox = () => {
 
   return (
     <div
-      className={`bg-[#FFFFFF] rounded-xl shadow-lg p-8 mx-auto transition-all ease-in-out cursor-pointer
+      className={`bg-white rounded-xl shadow-lg p-8 mx-auto transition-all ease-in-out cursor-pointer
         ${isExpanded || isTransitioning
           ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700"
-          : "w-full xl:max-w-5/6 h-40 hover:scale-105 duration-400 relative border border-[#E5E5E5]"
+          : "w-full xl:max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-gray-200"
         }
         ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
       onClick={toggleExpand}
@@ -108,12 +108,21 @@ const ExperienceBox = () => {
                         className={`absolute top-0 left-0 w-full transition-opacity duration-300 flex justify-center
                           ${index === (carouselIndices[category] || 0) ? "opacity-100 visible" : "opacity-0 invisible"}`}
                       >
-                        <div className="flex flex-col items-center w-64 p-4 bg-[#F7F7F7] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                          <img
-                            src={itemIcons[item.title] || "https://example.com/default-icon.png"}
-                            alt={item.title}
-                            className="w-16 h-16 mb-4 object-contain rounded-full border border-[#A3BFFA] p-1"
-                          />
+                        <div className="flex flex-col items-center w-64 p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                          {/* 將圖片包在 <a> 標籤中，並設置與下方文字相同的連結 */}
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block"
+                          >
+                            <img
+                              src={itemIcons[item.title] || "https://example.com/default-icon.png"}
+                              alt={item.title}
+                              className="w-16 h-16 mb-4 object-contain rounded-full border border-[#A3BFFA] p-1 
+                                transition-all duration-300 hover:shadow-[0_0_15px_5px_rgba(163,191,250,0.5)]"
+                            />
+                          </a>
                           <p className="text-[#4A4A4A] font-sans text-center">
                             <a href={item.link} className="text-[#A3BFFA] hover:underline" target="_blank" rel="noopener noreferrer">
                               {item.title}
