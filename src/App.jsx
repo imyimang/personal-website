@@ -14,7 +14,6 @@ function App() {
   return (
     <Router>
       {/* 全局的 MouseTrail */}
-      <MouseTrail />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/g0v-2024" element={<GzeroV/>} />
