@@ -56,7 +56,7 @@ server {
     server_name your_domain_or_ip;  # 用您的域名或IP替換
 
     location / {
-        proxy_pass http://localhost:5137;  # 要轉發的網站
+        proxy_pass http://localhost:5173;  # 要轉發的網站
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
