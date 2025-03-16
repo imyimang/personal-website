@@ -12,12 +12,13 @@ https://website-chi-seven-95.vercel.app/
 ### Ubuntu
 下載 node.js / npm
 ```bash
-sudo npm install nodejs -y
-sudo npm install npm -y
+sudo apt update
+sudo apt install -y nodejs npm
 ```
 
 下載專案
 ```bash
+sudo apt install -y git
 git clone https://github.com/imyimang/personal-website.git
 ```
 
