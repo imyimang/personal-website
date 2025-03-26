@@ -79,11 +79,11 @@ const ExperienceBox = () => {
   return (
     <div
       className={`bg-white rounded-xl shadow-lg p-8 mx-auto transition-all ease-in-out cursor-pointer
-        ${isExpanded || isTransitioning
+    ${isExpanded || isTransitioning
           ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700"
-          : "w-full xl:max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-gray-200"
+          : "w-full max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-gray-200"
         }
-        ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
+    ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
       onClick={toggleExpand}
     >
       <div className={`flex flex-col ${isExpanded ? "" : "justify-center items-center h-full"}`}>
