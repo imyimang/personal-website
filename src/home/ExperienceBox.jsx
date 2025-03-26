@@ -45,16 +45,16 @@ const ExperienceBox = () => {
 
   const experiences = {
     其他網站: [
-      { title: "Blog", role: "", period: "", link: "https://blog.isgay.tech" },
+      { title: "Blog", role: "", period: "", link: "https://blog.yimang.tw" },
     ],
-    社群經歷: [
+    商業經歷: [
       { title: "CoffeeHost超大咖託管", role: "合夥創辦人", period: "(2024 – Present)", link: "https://coffeehost.net" },
     ],
     校園經歷: [
       { title: "大安高工第26屆電腦研究社", role: "副社/軟教", period: "(2024 – Present)", link: "https://www.instagram.com/dacsc26th/" },
       { title: "大安高工第1屆資訊安全研究社", role: "網管", period: "(2024 – Present)", link: "https://www.instagram.com/taivs.cssc/" },
     ],
-    活動經歷: [
+    社群經歷: [
       { title: "g0v Summit 2024", role: "會眾", period: "", link: "/g0v-2024" },
       { title: "CYBERSEC 2024 臺灣資安大會", role: "參與者", period: "", link: "/cybersec-2024" },
       { title: "SITCON Hackathon 2024", role: "參賽者", period: "", link: "/sitcon-hackathon-2024" },
