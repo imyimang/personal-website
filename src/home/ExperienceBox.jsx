@@ -100,7 +100,7 @@ const ExperienceBox = () => {
                   <ul className="list-disc">
                     {items.map((item, index) => (
                       <li key={index} className="text-[#4A4A4A] font-sans mb-2">
-                        {category === "社群經歷" ? (
+                        {category === "活動經歷" ? (
                           renderCommunityItem(item)
                         ) : (
                           <>
