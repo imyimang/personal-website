@@ -5,12 +5,11 @@ import HomeIcon from '../Homeicon';
 const Photo = () => {
     <HomeIcon />
     const photos = [
-        '/photo/cybersec-2024/img.jpg',
-        '/photo/cybersec-2024/img2.jpg',
-        '/photo/cybersec-2024/img3.jpg',
-        '/photo/cybersec-2024/img4.jpg',
-        '/photo/cybersec-2024/img5.jpg',
-        '/photo/cybersec-2024/img6.jpg',
+        '/photo/cybersec-2025/img.jpg',
+        '/photo/cybersec-2025/img2.jpg',
+        '/photo/cybersec-2025/img3.jpg',
+        '/photo/cybersec-2025/img4.jpg',
+        '/photo/cybersec-2025/img5.jpg',
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -171,7 +170,7 @@ const Photo = () => {
 };
 
 
-const CyberSec24 = () => {
+const CyberSec25 = () => {
     const [titleHeight, setTitleHeight] = useState(0);
     const handleTitleHeightChange = (height) => {
         setTitleHeight(height);
@@ -186,4 +185,4 @@ const CyberSec24 = () => {
     );
 };
 
-export default CyberSec24;
+export default CyberSec25;

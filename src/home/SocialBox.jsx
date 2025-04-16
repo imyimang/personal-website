@@ -16,7 +16,7 @@ const SocialBox = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-2xl p-5 w-full max-w-[83.333%] h-40 mx-auto flex flex-col justify-between items-center transition-transform duration-400 hover:scale-110">
+    <div className="bg-white rounded-lg shadow-2xl p-5 w-full max-w-[83.333%] h-40 mx-auto flex flex-col justify-between items-center transition-transform duration-400 hover:scale-110 border border-black">
       {/* 社交媒體圖標區域 */}
       <div className="flex justify-around items-center w-full px-10">
         <a
