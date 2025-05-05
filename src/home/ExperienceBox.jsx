@@ -7,7 +7,7 @@ const ExperienceBox = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const toggleExpand = () => {
-    console.log("Toggle clicked, isExpanded:", isExpanded); // 調試用
+    console.log("Toggle clicked, isExpanded:", isExpanded);
     if (isExpanded) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -37,15 +37,37 @@ const ExperienceBox = () => {
       { title: "Blog", period: "", link: "https://blog.yimang.tw" },
     ],
     商業經歷: [
-      { title: "CoffeeHost超大咖託管", role: "合夥創辦人", period: "(2024/2 – Present)", link: "https://coffeehost.net" },
+      {
+        title: "CoffeeHost超大咖託管",
+        role: "合夥創辦人",
+        period: "(2024/2 – Present)",
+        link: "https://coffeehost.net",
+      },
     ],
     校園經歷: [
-      { title: "大安高工第26屆電腦研究社", role: "副社/軟教", period: "", link: "https://www.instagram.com/dacsc26th/" },
-      { title: "大安高工第1屆資訊安全研究社", role: "網管", period: "", link: "https://www.instagram.com/taivs.cssc/" },
+      {
+        title: "大安高工第26屆電腦研究社",
+        role: "副社/軟教",
+        period: "",
+        link: "https://www.instagram.com/dacsc26th/",
+      },
+      {
+        title: "大安高工第1屆資訊安全研究社",
+        role: "網管",
+        period: "",
+        link: "https://www.instagram.com/taivs.cssc/",
+      },
     ],
     活動經歷: [
       { title: "g0v Summit", years: [{ year: "2024", link: "/g0v-2024" }], period: "" },
-      { title: "CYBERSEC 臺灣資安大會", years: [{ year: "2024", link: "/cybersec-2024" }, { year: "2025", link: "/cybersec-2025" }], period: "" },
+      {
+        title: "CYBERSEC 臺灣資安大會",
+        years: [
+          { year: "2024", link: "/cybersec-2024" },
+          { year: "2025", link: "/cybersec-2025" },
+        ],
+        period: "",
+      },
       { title: "SITCON Hackathon", years: [{ year: "2024", link: "/sitcon-hackathon-2024" }], period: "" },
       { title: "SITCON", years: [{ year: "2025", link: "/sitcon-2025" }], period: "" },
     ],
@@ -81,7 +103,8 @@ const ExperienceBox = () => {
           ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700"
           : "w-full max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-black"
         }
-        ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
+        ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}
+        ${isExpanded ? "mobile-no-scroll" : ""}`}
       onClick={toggleExpand}
     >
       <div className={`flex flex-col ${isExpanded ? "" : "justify-center items-center h-full"}`}>
@@ -128,6 +151,14 @@ const ExperienceBox = () => {
           <p className="text-[#4A4A4A] text-center font-sans">點擊查看</p>
         )}
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .mobile-no-scroll {
+            overflow-x: hidden;
+            touch-action: pan-y;
+          }
+        }
+      `}</style>
     </div>
   );
 };
