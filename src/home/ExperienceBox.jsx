@@ -13,11 +13,9 @@ const ExperienceBox = () => {
       setTimeout(() => {
         setIsExpanded(false);
         setIsTransitioning(false);
-        document.body.classList.remove("restrict-scroll");
       }, 700);
     } else {
       setIsExpanded(true);
-      document.body.classList.add("restrict-scroll");
     }
   };
 
@@ -102,13 +100,13 @@ const ExperienceBox = () => {
     <div
       className={`bg-white rounded-xl shadow-2xl p-8 mx-auto transition-all ease-in-out cursor-pointer
         ${isExpanded || isTransitioning
-          ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700 gradient-bound"
+          ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700"
           : "w-full max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-black"
         }
         ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
       onClick={toggleExpand}
     >
-      <div className={`flex flex-col ${isExpanded ? "content-container" : "justify-center items-center h-full"}`}>
+      <div className={`flex flex-col ${isExpanded ? "" : "justify-center items-center h-full"}`}>
         <h2 className="text-[#4A4A4A] text-2xl font-bold text-center font-sans mb-4">
           About me
         </h2>
@@ -152,29 +150,6 @@ const ExperienceBox = () => {
           <p className="text-[#4A4A4A] text-center font-sans">點擊查看</p>
         )}
       </div>
-      <style jsx global>{`
-        @media (max-width: 768px) {
-          .restrict-scroll {
-            overflow-x: hidden;
-            touch-action: pan-y;
-            width: 100vw;
-            height: 100vh;
-            position: fixed; /* 防止 body 滾動 */
-          }
-          .gradient-bound {
-            max-width: 100vw;
-            max-height: 100vh;
-            overflow-y: auto; /* 允許垂直滾動 */
-            overflow-x: hidden; /* 禁止水平滾動 */
-            box-sizing: border-box;
-          }
-          .content-container {
-            padding: 16px; /* 內邊距，確保內容不貼邊 */
-            max-width: 100%;
-            max-height: 100%;
-          }
-        }
-      `}</style>
     </div>
   );
 };
