@@ -10,15 +10,20 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* 確保 html 也有漸層背景 */
+}
+
 body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* 從右到左的淺灰色到淺藍色的漸層 */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh; /* 使用 min-height 替代 height */
+  height: -webkit-fill-available; /* 兼容手機瀏覽器的動態高度 */
+  width: 100vw;
   color: white; /* 文字顏色設為白色，方便在淺色背景上顯示 */
-  width: 100vw; /* 明確設置寬度 */
   overflow: hidden; /* 禁止 body 滾動 */
 }
 
@@ -27,10 +32,12 @@ body {
   body {
     touch-action: pan-y; /* 僅允許垂直滑動 */
     overflow-x: hidden; /* 禁止水平滾動 */
-    overflow-y: hidden; /* 禁止垂直滾動，確保不超出 100vh */
+    overflow-y: hidden; /* 禁止垂直滾動，確保不超出視窗 */
     position: fixed; /* 鎖定 body，防止滾動 */
     top: 0;
     left: 0;
+    min-height: 100vh; /* 確保覆蓋視窗 */
+    height: -webkit-fill-available; /* 兼容手機瀏覽器 */
   }
 }
 
