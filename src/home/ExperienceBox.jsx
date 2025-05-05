@@ -79,7 +79,7 @@ const ExperienceBox = () => {
       className={`bg-white rounded-xl shadow-2xl p-8 mx-auto transition-all ease-in-out cursor-pointer
         ${isExpanded || isTransitioning
           ? "fixed top-0 left-0 w-full h-full z-[60] overflow-auto duration-700"
-          : "w-full sm:max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-black"
+          : "w-full max-w-[83.333%] h-40 hover:scale-105 duration-400 relative border border-black"
         }
         ${isTransitioning ? "scale-90 opacity-0" : "scale-100 opacity-100"}`}
       onClick={toggleExpand}
