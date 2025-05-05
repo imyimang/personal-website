@@ -11,7 +11,7 @@ const Homepage = () => {
   };
 
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <HomeIcon />
       <Title
@@ -32,7 +32,7 @@ const Homepage = () => {
           Copyright © 2024-2025 yimang. All rights reserved.
         </span>
       </footer>
-    </>
+    </div>
   );
 };
 
