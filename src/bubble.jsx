@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'; // 加入 useEffect
+import React, { useRef, useState, useEffect } from 'react';
 
 const OverlayImageDownload = () => {
   const [imageSrc, setImageSrc] = useState(null);
@@ -178,6 +178,14 @@ const OverlayImageDownload = () => {
       left: '-9999px',
     }
   };
+
+  // 進入 bubble 頁面時加上 .bubble-page，離開時移除
+  useEffect(() => {
+    document.body.classList.add('bubble-page');
+    return () => {
+      document.body.classList.remove('bubble-page');
+    };
+  }, []);
 
   // 創建一個自包含的樣式範圍，而不完全重置所有樣式
   return (
