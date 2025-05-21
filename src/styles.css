@@ -28,7 +28,7 @@ body {
 
 /* 手機專屬樣式 */
 @media (max-width: 768px) {
-  body {
+  body:not(.bubble-page) {
     touch-action: pan-y; /* 僅允許垂直滑動 */
     overflow-x: hidden; /* 禁止水平滾動 */
     position: fixed; /* 鎖定 body，防止滾動 */

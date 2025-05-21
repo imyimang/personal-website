@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react'; // 加入 useEffect
 
 const OverlayImageDownload = () => {
   const [imageSrc, setImageSrc] = useState(null);
