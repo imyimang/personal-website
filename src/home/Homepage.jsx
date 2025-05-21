@@ -11,7 +11,7 @@ const Homepage = () => {
   };
 
   return (
-    <div className="overflow-x-hidden w-full">
+    <div className="overflow-hidden md:overflow-auto w-full">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <HomeIcon />
       <Title

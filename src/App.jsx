@@ -9,6 +9,7 @@ import HackaThon from "./photo/sitcon-hackathon-2024";
 import SITCON from "./photo/sitcon-2025";
 import CyberSec24 from "./photo/cybersec-2024";
 import CyberSec25 from "./photo/cybersec-2025";
+import OverlayImageDownload from "./bubble";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cybersec-2025" element={<CyberSec25 />} />
         <Route path="/sitcon-hackathon-2024" element={<HackaThon/>} />
         <Route path="/sitcon-2025" element={<SITCON/>} />
+        <Route path="/bubble" element={<OverlayImageDownload />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

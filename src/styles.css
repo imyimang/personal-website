@@ -24,7 +24,6 @@ body {
   height: -webkit-fill-available; /* 兼容手機瀏覽器的動態高度 */
   width: 100vw;
   color: white; /* 文字顏色設為白色，方便在淺色背景上顯示 */
-  overflow: hidden; /* 禁止 body 滾動 */
 }
 
 /* 手機專屬樣式 */
@@ -32,7 +31,6 @@ body {
   body {
     touch-action: pan-y; /* 僅允許垂直滑動 */
     overflow-x: hidden; /* 禁止水平滾動 */
-    overflow-y: hidden; /* 禁止垂直滾動，確保不超出視窗 */
     position: fixed; /* 鎖定 body，防止滾動 */
     top: 0;
     left: 0;
