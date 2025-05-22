@@ -191,7 +191,7 @@ const OverlayImageDownload = () => {
   return (
     <div className="overlay-image-download-component" style={isolatedStyles.wrapper}>
       <div style={isolatedStyles.page}>
-        <h2 style={isolatedStyles.title}>圖片上方加 PNG 對話框並下載</h2>
+        <h2 style={isolatedStyles.title}>對話框圖片生成</h2>
         <input
           type="file"
           accept="image/*"
