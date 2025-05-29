@@ -5,11 +5,11 @@ import HomeIcon from '../Homeicon';
 const Photo = () => {
     <HomeIcon />
     const photos = [
-        '/photo/g0v-2024/g0v.jpg',
-        '/photo/g0v-2024/g0v2.jpg',
-        '/photo/g0v-2024/g0v4.jpg',
-        '/photo/g0v-2024/g0v5.jpg',
-        '/photo/g0v-2024/g0v3.jpg',
+        '/photo/computex-2025/img.jpg',
+        '/photo/computex-2025/img2.jpg',
+        '/photo/computex-2025/img3.jpg',
+        '/photo/computex-2025/img4.jpg',
+        '/photo/computex-2025/img5.jpg',
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -170,7 +170,7 @@ const Photo = () => {
 };
 
 
-const GZeroV24 = () => {
+const COMPUTEX25 = () => {
     const [titleHeight, setTitleHeight] = useState(0);
     const handleTitleHeightChange = (height) => {
         setTitleHeight(height);
@@ -185,4 +185,4 @@ const GZeroV24 = () => {
     );
 };
 
-export default GZeroV24;
+export default COMPUTEX25;

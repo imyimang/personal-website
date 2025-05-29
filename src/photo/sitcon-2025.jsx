@@ -170,7 +170,7 @@ const Photo = () => {
 };
 
 
-const SITCON = () => {
+const SITCON25 = () => {
     const [titleHeight, setTitleHeight] = useState(0);
     const handleTitleHeightChange = (height) => {
         setTitleHeight(height);
@@ -185,4 +185,4 @@ const SITCON = () => {
     );
 };
 
-export default SITCON;
+export default SITCON25;
