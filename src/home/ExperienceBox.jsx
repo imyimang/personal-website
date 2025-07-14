@@ -36,7 +36,7 @@ const ExperienceBox = () => {
     其他網站: [
       { title: "Blog", period: "", link: "https://blog.yimang.tw" },
     ],
-    商業經歷: [
+    任職: [
       {
         title: "CoffeeHost超大咖託管",
         role: "合夥創辦人",
