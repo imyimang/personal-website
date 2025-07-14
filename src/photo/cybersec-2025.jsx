@@ -39,7 +39,14 @@ const Photo = () => {
     };
 
     return (
+        
         <div className="max-w-4xl mx-auto p-5">
+            {/* 預載全部圖片（隱藏） */}
+            <div className="hidden">
+                {photos.map((src, i) => (
+                    <img key={i} src={src} alt={`Preload ${i}`} />
+                ))}
+            </div>
             {/* 主相簿容器 */}
             <div className="relative w-full h-[600px] overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center">

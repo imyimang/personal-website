@@ -1,9 +1,7 @@
-// PhotoGallery.jsx
 import React, { useState } from 'react';
 import HomeIcon from '../Homeicon';
 
 const Photo = () => {
-    <HomeIcon />
     const photos = [
         '/photo/g0v-2024/g0v.jpg',
         '/photo/g0v-2024/g0v2.jpg',
@@ -40,6 +38,13 @@ const Photo = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-5">
+            {/* 預載全部圖片（隱藏） */}
+            <div className="hidden">
+                {photos.map((src, i) => (
+                    <img key={i} src={src} alt={`Preload ${i}`} />
+                ))}
+            </div>
+
             {/* 主相簿容器 */}
             <div className="relative w-full h-[600px] overflow-hidden">
                 <div className="w-full h-full flex items-center justify-center">
@@ -54,7 +59,7 @@ const Photo = () => {
                     />
                 </div>
 
-                {/* 固定在螢幕左右邊的按鈕 */}
+                {/* 左右切換按鈕 */}
                 <button
                     className="fixed left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full 
                               bg-white/70 hover:bg-white/90 text-2xl flex items-center justify-center
@@ -169,13 +174,7 @@ const Photo = () => {
     );
 };
 
-
 const GZeroV24 = () => {
-    const [titleHeight, setTitleHeight] = useState(0);
-    const handleTitleHeightChange = (height) => {
-        setTitleHeight(height);
-    };
-
     return (
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -59,18 +59,20 @@ const ExperienceBox = () => {
       },
     ],
     活動經歷: [
-      { title: "g0v Summit", years: [{ year: "2024", link: "/g0v-2024" }], period: "" },
-      { title: "SITCON Hackathon", years: [{ year: "2024", link: "/sitcon-hackathon-2024" }], period: "" },
+      { title: "g0v Summit", years: [{ year: "2024", link: "/g0v-2024" }], role: "會眾", period: "" },
+      { title: "SITCON Hackathon", years: [{ year: "2024", link: "/sitcon-hackathon-2024" }], role: "會眾", period: "" },
       {
         title: "CYBERSEC 臺灣資安大會",
         years: [
           { year: "2024", link: "/cybersec-2024" },
           { year: "2025", link: "/cybersec-2025" },
         ],
+        role: "會眾",
         period: "",
       },
-      { title: "SITCON", years: [{ year: "2025", link: "/sitcon-2025" }], period: "" },
-      { title: "COMPUTEX", years: [{ year: "2025", link: "/computex-2025" }], period: "" },
+      { title: "SITCON", years: [{ year: "2025", link: "/sitcon-2025" }], role: "會眾", period: "" },
+      { title: "COMPUTEX", years: [{ year: "2025", link: "/computex-2025" }], role: "會眾", period: "" },
+      { title: "SITCON Camp", years: [{ year: "2025", link: "" }], role: "庶務組", period: "" },
     ],
   };
 
@@ -93,6 +95,12 @@ const ExperienceBox = () => {
             {index < item.years.length - 1 && <span className="text-[#4A4A4A]">、</span>}
           </React.Fragment>
         ))}
+        {item.role && (
+          <>
+            <span className="text-[#4A4A4A] mx-1">|</span>
+            <span className="text-[#4A4A4A]">{item.role}</span>
+          </>
+        )}
       </>
     );
   };
