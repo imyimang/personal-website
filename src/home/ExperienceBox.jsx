@@ -39,7 +39,7 @@ const ExperienceBox = () => {
     任職: [
       {
         title: "CoffeeHost超大咖託管",
-        role: "合夥創辦人",
+        role: "共同創辦人",
         period: "(2024/2 – Present)",
         link: "https://coffeehost.net",
       },
