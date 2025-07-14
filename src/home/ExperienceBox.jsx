@@ -72,7 +72,7 @@ const ExperienceBox = () => {
       },
       { title: "SITCON", years: [{ year: "2025", link: "/sitcon-2025" }], role: "會眾", period: "" },
       { title: "COMPUTEX", years: [{ year: "2025", link: "/computex-2025" }], role: "會眾", period: "" },
-      { title: "SITCON Camp", years: [{ year: "2025", link: "" }], role: "庶務組", period: "" },
+      { title: "SITCON Camp", years: [{ year: "2025", link: "/sitcon-camp-2025" }], role: "庶務組", period: "" },
     ],
   };
 

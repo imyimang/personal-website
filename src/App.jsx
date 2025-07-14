@@ -11,6 +11,7 @@ import CyberSec24 from "./photo/cybersec-2024";
 import CyberSec25 from "./photo/cybersec-2025";
 import OverlayImageDownload from "./bubble";
 import COMPUTEX25 from "./photo/computex-2025";
+import SITCONCAMP25 from "./photo/sitcon-camp-2025";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/sitcon-hackathon-2024" element={<HackaThon/>} />
         <Route path="/sitcon-2025" element={<SITCON25/>} />
         <Route path="/computex-2025" element={<COMPUTEX25/>} />
+        <Route path="/sitcon-camp-2025" element={<SITCONCAMP25/>} />
         <Route path="/bubble" element={<OverlayImageDownload />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
