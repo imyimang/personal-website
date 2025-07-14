@@ -60,7 +60,7 @@ const ExperienceBox = () => {
     ],
     活動經歷: [
       { title: "g0v Summit", years: [{ year: "2024", link: "/g0v-2024" }], role: "會眾", period: "" },
-      { title: "SITCON Hackathon", years: [{ year: "2024", link: "/sitcon-hackathon-2024" }], role: "會眾", period: "" },
+      { title: "SITCON Hackathon", years: [{ year: "2024", link: "/sitcon-hackathon-2024" }], role: "參賽者", period: "" },
       {
         title: "CYBERSEC 臺灣資安大會",
         years: [
