@@ -21,11 +21,17 @@ const ExperienceBox = () => {
 
   const introduction = (
     <div className="flex items-center justify-center space-x-4">
-      <img
-        src={profileImage}
-        alt="Profile"
-        className="w-16 h-16 rounded-full object-cover border-2 border-[#A3BFFA] shadow-sm"
-      />
+      <div className="relative group">
+        <img
+          src={profileImage}
+          alt="Profile"
+          className="w-16 h-16 rounded-full object-cover border-2 border-[#A3BFFA] shadow-sm transition-all duration-300 hover:scale-125 cursor-pointer relative z-10 hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.5)]"
+          onClick={(e) => {
+            e.stopPropagation();
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+          }}
+        />
+      </div>
       <span className="text-[#4A4A4A] font-sans text-center">
         一個喜歡寫程式和參與社群的高中生
       </span>
