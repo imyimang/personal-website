@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import HomeIcon from '../Homeicon';
 
 const Photo = () => {
-    <HomeIcon />
     const photos = [
         '/photo/computex-2025/img.jpg',
         '/photo/computex-2025/img2.jpg',
@@ -177,11 +176,6 @@ const Photo = () => {
 
 
 const COMPUTEX25 = () => {
-    const [titleHeight, setTitleHeight] = useState(0);
-    const handleTitleHeightChange = (height) => {
-        setTitleHeight(height);
-    };
-
     return (
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
