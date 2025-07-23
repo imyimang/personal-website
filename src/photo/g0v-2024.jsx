@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeIcon from '../Homeicon';
-import PhotoGallery from '../components/PhotoGallery';
+import LazyPhotoGallery from '../components/LazyPhotoGallery';
 
 const GZeroV24 = () => {
     const photos = [
@@ -15,7 +15,7 @@ const GZeroV24 = () => {
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <HomeIcon />
-            <PhotoGallery photos={photos} title="g0v Summit 2024" />
+            <LazyPhotoGallery photos={photos} title="g0v Summit 2024" />
         </>
     );
 };
