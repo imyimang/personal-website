@@ -131,7 +131,7 @@ const LazyPhotoGallery = ({ photos, title }) => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto py-5">
             {title && (
                 <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[#4A4A4A] px-5">
                     {title}

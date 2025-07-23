@@ -28,7 +28,8 @@ body {
 
 /* 手機專屬樣式 */
 @media (max-width: 768px) {
-  body:not(.bubble-page) {
+  /* 只有首頁鎖定滾動 */
+  body.homepage-mobile {
     touch-action: pan-y; /* 僅允許垂直滑動 */
     overflow-x: hidden; /* 禁止水平滾動 */
     position: fixed; /* 鎖定 body，防止滾動 */
@@ -36,6 +37,22 @@ body {
     left: 0;
     min-height: 100vh; /* 確保覆蓋視窗 */
     height: -webkit-fill-available; /* 兼容手機瀏覽器 */
+  }
+  
+  /* 其他頁面允許垂直滾動，禁止水平滾動 */
+  body:not(.bubble-page):not(.homepage-mobile) {
+    touch-action: pan-y; /* 僅允許垂直滑動 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+    overflow-y: auto; /* 允許垂直滾動 */
+    position: relative; /* 不鎖定位置 */
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom); /* iOS 安全區域 */
+  }
+  
+  /* bubble 頁面保持原有設定 */
+  body.bubble-page {
+    position: relative;
+    overflow: auto;
   }
 }
 
