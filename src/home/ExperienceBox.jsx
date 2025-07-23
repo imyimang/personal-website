@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const profileImage = "/icon.png";
+const profileImage = "/icon.webp";
 
 const ExperienceBox = () => {
   const [isExpanded, setIsExpanded] = useState(false);

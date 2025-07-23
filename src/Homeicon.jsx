@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from "/icon.png"
+import Icon from "/icon.webp"
 
 const HomeIcon = () => {
   const handleClick = () => {
