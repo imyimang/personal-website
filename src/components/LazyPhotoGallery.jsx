@@ -192,34 +192,90 @@ const LazyPhotoGallery = ({ photos, title }) => {
                 </button>
             </div>
 
-            {/* 縮圖導航 - 真正的懶加載 */}
+            {/* 縮圖導航 - 響應式懶加載 */}
             {photos.length > 1 && (
-                <div className="flex justify-center mt-4 space-x-2 overflow-x-auto pb-2 px-5">
-                    {photos.map((photo, index) => (
-                        <div
-                            key={index}
-                            ref={(el) => (imageRefs.current[index] = el)}
-                            data-index={index}
-                            onClick={() => handleThumbnailClick(index)}
-                            className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer
-                                ${index === currentIndex 
-                                    ? 'border-blue-500 opacity-100' 
-                                    : 'border-gray-300 opacity-60 hover:opacity-80'}`}
-                        >
-                            {loadedImages.has(index) ? (
-                                <img
-                                    src={photo}
-                                    alt={`Thumbnail ${index + 1}`}
-                                    className="w-full h-full object-cover"
-                                    loading="lazy"
-                                />
-                            ) : (
-                                <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                                    <div className="w-4 h-4 bg-gray-400 rounded animate-pulse"></div>
+                <div className="mt-4 px-2 sm:px-5">
+                    {/* 手機版：簡化的圓點指示器 */}
+                    <div className="md:hidden flex justify-center items-center space-x-1 mb-3">
+                        {photos.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleThumbnailClick(index)}
+                                className={`w-2 h-2 rounded-full transition-all duration-200
+                                    ${index === currentIndex 
+                                        ? 'bg-blue-500 w-4' 
+                                        : 'bg-gray-300 hover:bg-gray-400'}`}
+                                aria-label={`Go to photo ${index + 1}`}
+                            />
+                        ))}
+                    </div>
+                    
+                    {/* 手機版：當前照片前後的縮圖 */}
+                    <div className="md:hidden flex justify-center space-x-2 overflow-hidden">
+                        {photos.map((photo, index) => {
+                            // 只顯示當前照片和前後各一張
+                            const isVisible = Math.abs(index - currentIndex) <= 1 || 
+                                             (currentIndex === 0 && index === photos.length - 1) ||
+                                             (currentIndex === photos.length - 1 && index === 0);
+                            
+                            if (!isVisible) return null;
+                            
+                            return (
+                                <div
+                                    key={index}
+                                    ref={(el) => (imageRefs.current[index] = el)}
+                                    data-index={index}
+                                    onClick={() => handleThumbnailClick(index)}
+                                    className={`flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer
+                                        ${index === currentIndex 
+                                            ? 'border-blue-500 opacity-100 scale-110' 
+                                            : 'border-gray-300 opacity-60 hover:opacity-80'}`}
+                                >
+                                    {loadedImages.has(index) ? (
+                                        <img
+                                            src={photo}
+                                            alt={`Thumbnail ${index + 1}`}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                                            <div className="w-3 h-3 bg-gray-400 rounded animate-pulse"></div>
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            );
+                        })}
+                    </div>
+                    
+                    {/* 桌面版：完整的縮圖滾動列表 */}
+                    <div className="hidden md:flex justify-center space-x-2 overflow-x-auto pb-2 scrollbar-hide">
+                        {photos.map((photo, index) => (
+                            <div
+                                key={index}
+                                ref={(el) => (imageRefs.current[index] = el)}
+                                data-index={index}
+                                onClick={() => handleThumbnailClick(index)}
+                                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer
+                                    ${index === currentIndex 
+                                        ? 'border-blue-500 opacity-100' 
+                                        : 'border-gray-300 opacity-60 hover:opacity-80'}`}
+                            >
+                                {loadedImages.has(index) ? (
+                                    <img
+                                        src={photo}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                                        <div className="w-4 h-4 bg-gray-400 rounded animate-pulse"></div>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
 
@@ -322,6 +378,16 @@ const LazyPhotoGallery = ({ photos, title }) => {
                     animation: fade-in 0.2s ease-out;
                 }
 
+                /* 隱藏滾動條 */
+                .scrollbar-hide {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+                
+                .scrollbar-hide::-webkit-scrollbar {
+                    display: none;
+                }
+
                 @media (max-width: 768px) {
                     .h-[400px] {
                         height: 300px;
@@ -345,6 +411,27 @@ const LazyPhotoGallery = ({ photos, title }) => {
 
                     .fixed.right-4 {
                         right: 0.5rem;
+                    }
+
+                    /* 手機版縮圖調整 */
+                    .w-14.h-14 {
+                        min-width: 3.5rem;
+                        min-height: 3.5rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .fixed.left-4 {
+                        left: 0.25rem;
+                    }
+
+                    .fixed.right-4 {
+                        right: 0.25rem;
+                    }
+                    
+                    .px-2 {
+                        padding-left: 0.25rem;
+                        padding-right: 0.25rem;
                     }
                 }
             `}</style>
