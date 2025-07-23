@@ -4,11 +4,11 @@ import LazyPhotoGallery from '../components/LazyPhotoGallery';
 
 const HackaThon = () => {
     const photos = [
-        '/photo/sitcon-hackathon-2024/img.jpg',
-        '/photo/sitcon-hackathon-2024/img2.jpg',
-        '/photo/sitcon-hackathon-2024/img3.jpg',
-        '/photo/sitcon-hackathon-2024/img4.jpg',
-        '/photo/sitcon-hackathon-2024/img5.jpg',
+        '/photo/sitcon-hackathon-2024/img.webp',
+        '/photo/sitcon-hackathon-2024/img2.webp',
+        '/photo/sitcon-hackathon-2024/img3.webp',
+        '/photo/sitcon-hackathon-2024/img4.webp',
+        '/photo/sitcon-hackathon-2024/img5.webp',
     ];
 
     return (

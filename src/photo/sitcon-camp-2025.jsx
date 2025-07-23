@@ -4,9 +4,9 @@ import LazyPhotoGallery from '../components/LazyPhotoGallery';
 
 const SITCONCAMP25 = () => {
     const photos = [
-        '/photo/sitcon-camp-2025/img.jpg',
-        '/photo/sitcon-camp-2025/img2.jpg',
-        '/photo/sitcon-camp-2025/img3.jpg',
+        '/photo/sitcon-camp-2025/img.webp',
+        '/photo/sitcon-camp-2025/img2.webp',
+        '/photo/sitcon-camp-2025/img3.webp',
     ];
 
     return (

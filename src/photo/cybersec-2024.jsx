@@ -4,12 +4,12 @@ import LazyPhotoGallery from '../components/LazyPhotoGallery';
 
 const CyberSec24 = () => {
     const photos = [
-        '/photo/cybersec-2024/img.jpg',
-        '/photo/cybersec-2024/img2.jpg',
-        '/photo/cybersec-2024/img3.jpg',
-        '/photo/cybersec-2024/img4.jpg',
-        '/photo/cybersec-2024/img5.jpg',
-        '/photo/cybersec-2024/img6.jpg',
+        '/photo/cybersec-2024/img.webp',
+        '/photo/cybersec-2024/img2.webp',
+        '/photo/cybersec-2024/img3.webp',
+        '/photo/cybersec-2024/img4.webp',
+        '/photo/cybersec-2024/img5.webp',
+        '/photo/cybersec-2024/img6.webp',
     ];
 
     return (

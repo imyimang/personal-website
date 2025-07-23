@@ -4,11 +4,11 @@ import LazyPhotoGallery from '../components/LazyPhotoGallery';
 
 const GZeroV24 = () => {
     const photos = [
-        '/photo/g0v-2024/g0v.jpg',
-        '/photo/g0v-2024/g0v2.jpg',
-        '/photo/g0v-2024/g0v4.jpg',
-        '/photo/g0v-2024/g0v5.jpg',
-        '/photo/g0v-2024/g0v3.jpg',
+        '/photo/g0v-2024/g0v.webp',
+        '/photo/g0v-2024/g0v2.webp',
+        '/photo/g0v-2024/g0v4.webp',
+        '/photo/g0v-2024/g0v5.webp',
+        '/photo/g0v-2024/g0v3.webp',
     ];
 
     return (
