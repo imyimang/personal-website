@@ -95,7 +95,7 @@ const SocialBox = () => {
       {/* 電子郵件地址區域 */}
       <div className="text-center">
         <p className="text-sm text-gray-800 font-sans">
-          Email: <a href="mailto:me@yimang.tw" className="text-[#A3BFFA] hover:underline">me@yimang.tw</a>
+          Email: <a href="mailto:me@yimang.tw" className="text-black hover:underline">me@yimang.tw</a>
         </p>
       </div>
     </div>
