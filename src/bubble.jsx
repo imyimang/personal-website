@@ -1,4 +1,6 @@
+
 import React, { useRef, useState, useEffect } from 'react';
+import gifshot from 'gifshot';
 
 const OverlayImageDownload = () => {
   const [imageSrc, setImageSrc] = useState(null);
@@ -21,6 +23,7 @@ const OverlayImageDownload = () => {
     reader.readAsDataURL(file);
   };
 
+  const [downloadFormat, setDownloadFormat] = useState('png');
   const handleDownload = async () => {
     const uploadedImage = uploadedImageRef.current;
     const bubbleOverlay = bubbleOverlayRef.current;
@@ -65,10 +68,35 @@ const OverlayImageDownload = () => {
     const bubbleHeight = (bubbleOverlay.naturalHeight * width) / bubbleOverlay.naturalWidth;
     ctx.drawImage(bubbleOverlay, 0, 0, width, bubbleHeight);
 
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
-    link.download = 'composite_image.png';
-    link.click();
+    if (downloadFormat === 'gif') {
+      // 取得合成後的靜態圖片資料
+      const dataUrl = canvas.toDataURL('image/png');
+      gifshot.createGIF({
+        images: [dataUrl],
+        gifWidth: width,
+        gifHeight: height,
+        numFrames: 1,
+        frameDuration: 1,
+        interval: 0.1,
+        sampleInterval: 10,
+        // 靜態圖
+        progressCallback: () => {},
+      }, function(obj) {
+        if (!obj.error) {
+          const link = document.createElement('a');
+          link.href = obj.image;
+          link.download = 'composite_image.gif';
+          link.click();
+        } else {
+          alert('GIF 產生失敗');
+        }
+      });
+    } else {
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'composite_image.png';
+      link.click();
+    }
   };
 
   // 創建隔離的樣式，避免受全域CSS影響
@@ -223,18 +251,44 @@ const OverlayImageDownload = () => {
         )}
 
         {showContainer && bubbleLoaded && (
-          <button 
-            onClick={handleDownload} 
-            style={isolatedStyles.downloadBtn}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#45a049';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = '#4CAF50';
-            }}
-          >
-            下載合成圖片
-          </button>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <div style={{ marginBottom: '5px' }}>
+              <label style={{ marginRight: '10px', fontSize: '16px' }}>
+                <input
+                  type="radio"
+                  name="downloadFormat"
+                  value="png"
+                  checked={downloadFormat === 'png'}
+                  onChange={() => setDownloadFormat('png')}
+                  style={{ marginRight: '4px' }}
+                />
+                PNG
+              </label>
+              <label style={{ fontSize: '16px' }}>
+                <input
+                  type="radio"
+                  name="downloadFormat"
+                  value="gif"
+                  checked={downloadFormat === 'gif'}
+                  onChange={() => setDownloadFormat('gif')}
+                  style={{ marginRight: '4px' }}
+                />
+                GIF
+              </label>
+            </div>
+            <button 
+              onClick={handleDownload} 
+              style={isolatedStyles.downloadBtn}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = '#45a049';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = '#4CAF50';
+              }}
+            >
+              下載合成圖片
+            </button>
+          </div>
         )}
 
         <canvas ref={canvasRef} style={isolatedStyles.hiddenCanvas} />
